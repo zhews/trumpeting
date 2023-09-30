@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package trumpeting.key_distribution;
+
+service KeyDistribution {
+        rpc StoreKey(StoreKeyRequest) returns (StoreKeyResponse) {}
+        rpc GetKey(GetKeyRequest) returns (GetKeyResponse) {}
+}
+
+message StoreKeyRequest {
+        string username = 1;
+        bytes public_key = 2;
+        bytes public_key_signature = 3;
+}
+
+message StoreKeyResponse {}
+
+message GetKeyRequest {
+        string username = 1;
+}
+
+message GetKeyResponse {
+        bytes public_key = 1;
+        bytes public_key_signature = 2;
+}
