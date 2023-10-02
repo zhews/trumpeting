@@ -7,7 +7,9 @@ edition = "2021"
 
 [dependencies]
 async-trait = "0.1.73"
+deadpool-postgres = "0.11.0"
 prost = "0.12.1"
+tokio-postgres = "0.7.10"
 tonic = "0.10.2"
 
 [build-dependencies]
